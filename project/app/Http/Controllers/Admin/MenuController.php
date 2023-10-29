@@ -12,8 +12,4 @@ class MenuController extends Controller
             'title' => 'Day la trang them '
         ]);
     }
-
-    public function edit() {
-        echo 123456789;
-    }
 }
