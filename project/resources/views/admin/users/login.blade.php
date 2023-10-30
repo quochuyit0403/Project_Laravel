@@ -121,7 +121,7 @@
         .box form .inputBox input:valid ~ span,
         .box form .inputBox input:focus ~ span {
             color: black;
-            font-size: 0.75em;
+            font-size: 0.8em;
             transform: translateY(-43px);
         }
 
@@ -141,6 +141,7 @@
         .box form .inputBox input:valid ~ i,
         .box form .inputBox input:focus ~ i {
             height: 43px;
+            
         }
 
         .box form .links {

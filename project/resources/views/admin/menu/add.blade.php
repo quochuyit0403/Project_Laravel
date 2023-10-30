@@ -10,7 +10,7 @@
 
             <div class="form-group">
                 <label for="menu">Tên Danh Mục</label>
-                <input type="text" name="menu " class="form-control"  placeholder="Nhập tên danh mục">
+                <input type="text" name="name" class="form-control"  placeholder="Nhập tên danh mục">
             </div>
 
             <div class="form-group">
@@ -41,6 +41,8 @@
         <div class="card-footer">
             <button type="submit" class="btn btn-primary">Tạo Danh Mục</button>
         </div>
+        
+        @csrf
     </form>
 @endsection
 
