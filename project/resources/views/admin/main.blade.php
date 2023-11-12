@@ -67,11 +67,8 @@
 
 
     <!-- /.content-wrapper -->
-    <footer class="main-footer">
-        <div class="float-right d-none d-sm-block">
-            <b>Version</b> 3.1.0
-        </div>
-        <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+    <footer class="main-footer" >
+        <strong>Copyright &copy; 2023 <a href="https://www.facebook.com/profile.php?id=100031398211869">LVQH</a></strong>
     </footer>
 </div>
 <!-- ./wrapper -->

@@ -19,14 +19,17 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background: black;
+            background: url(/template/admin/dist/img/beach2.jpeg);
+            background-size: cover; /* Kích thước ảnh sao cho nó phù hợp với cửa sổ trình duyệt */
+            background-position: center; /* Canh ảnh nền giữa trung tâm */
+            background-repeat: no-repeat;
         }
 
         .box {
             position: relative;
             width: 380px;
             height: 430px;
-            background-color: black;
+            background-color: rgb(23, 4, 58);
             border-radius: 10px;
             overflow: hidden;
         }
@@ -39,7 +42,7 @@
             top: -50%;
             left: -50%;
             background: linear-gradient(0deg, transparent,
-            transparent, rgb(111, 255, 238), rgb(111, 255, 238),rgb(111, 255, 238));
+            transparent, rgb(252, 118, 29), rgb(252, 118, 29),rgb(252, 118, 29));
             z-index: 1;
             transform-origin: bottom right;
             animation: animate 5s linear infinite;
@@ -53,7 +56,7 @@
             top: -50%;
             left: -50%;
             background: linear-gradient(0deg, transparent,
-            transparent, rgb(245, 86, 65), rgb(245, 86, 65),rgb(245, 86, 65));
+            transparent, rgb(254, 254, 254), rgb(254, 254, 254),rgb(254, 254, 254));
             z-index: 1;
             transform-origin: bottom right;
             animation: animate 5s linear infinite;
@@ -72,7 +75,7 @@
         .box form {
             position: absolute;
             inset: 4px;
-            background: white;
+            background: rgb(23, 4, 58);
             padding: 50px 40px;
             z-index: 2;
             display: flex;
@@ -80,10 +83,12 @@
         }
 
         .box form h2 {
-            color: black;
+            color: white;
             font-weight: 500;
             text-align: center;
             letter-spacing: 0.1em;
+            font-weight: bolder;
+            font-size: 30px;
         }
 
         .box form .inputBox {
@@ -100,7 +105,7 @@
             background: transparent;
             outline: none;
             box-shadow: none;
-            color: white;
+            color: black;
             font-size: 1em;
             letter-spacing: 0.05em;
             transition: 0.5s;
@@ -112,7 +117,7 @@
             left: 0;
             padding: 20px 0px 10px;
             pointer-events: none;
-            color: black;
+            color: white;
             font-size: 1em;
             letter-spacing: 0.05em;
             transition: 0.5s;
@@ -120,7 +125,7 @@
 
         .box form .inputBox input:valid ~ span,
         .box form .inputBox input:focus ~ span {
-            color: black;
+            color: white;
             font-size: 0.8em;
             transform: translateY(-43px);
         }
@@ -131,7 +136,7 @@
             bottom: 0;
             width: 100%;
             height: 0.5px;
-            background: black;
+            background: white;
             border-radius: 4px;
             overflow: hidden;
             transition: 0.5s;
@@ -152,7 +157,7 @@
         .box form .links a {
             margin: 10px 0;
             font-size: 0.8em;
-            color: black;
+            color: white;
             text-decoration: none;
             margin-top: 20px;
         }
@@ -177,6 +182,12 @@
 
         .box form input[type='submit']:hover {
             opacity: 0.8;
+            transition: all 0.5s ease;
+        }
+
+        /* Ni là css cho alert*/
+        .alert-text {
+            color: white !important;
         }
     </style>
 </head>
@@ -196,7 +207,7 @@
                 <i></i>
             </div>
             <br>
-            @include('admin.alert')
+            @include('admin.alert', ['class' => 'alert-text'])
             <div class="links">
                 <a href="#">Forgot Password</a>
                 <a href="#">Sign Up</a>

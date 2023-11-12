@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests\Menu;
+namespace App\Http\Requests\Hotel;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CreateFormRequest extends FormRequest
+class HotelRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -22,14 +22,16 @@ class CreateFormRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => 'required'
+            'name' => 'required',
+            'thumb' => 'required'
         ];
     }
 
-    public function messages(): array
+    public function messages()
     {
         return [
-            'name.required' => 'Vui long nhap ten danh muc',
+            'name.required' => "Vui lòng nhập tên Khách sạn!",
+            'thumb.required' => "Tên file ảnh không được để trống!"
         ];
     }
 }

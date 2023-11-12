@@ -9,13 +9,23 @@
         <div class="card-body">
 
             <div class="form-group">
-                <label for="menu">Tên Danh Mục</label>
-                <input type="text" name="name" class="form-control"  placeholder="Nhập tên danh mục">
+                <label for="menu">Tên địa điểm</label>
+                <input type="text" name="name" class="form-control"  placeholder="Nhập tên địa điểm">
             </div>
 
             <div class="form-group">
-                <label for="menu">Mô Tả </label>
-                <textarea name="description" class="form-control"></textarea>
+                <label for="menu">Địa điểm</label>
+                <select class="form-control" name="parent_id">
+                    <option value="0">Quận</option>
+                    @foreach($destinations as $destination)
+                        <option value="{{ $destination->id }}">{{ $destination->name }}</option>
+                    @endforeach
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="menu">Mô Tả</label>
+                <textarea name="description" class="form-control" placeholder="Mô tả ngắn gọn"></textarea>
             </div>
 
             <div class="form-group">
@@ -25,7 +35,7 @@
 
 
             <div class="form-group">
-                <label>Kích Hoạt</label>
+                <label>Hoạt động</label>
                 <div class="custom-control custom-radio">
                     <input class="custom-control-input" value="1" type="radio" id="active" name="active" checked="">
                     <label for="active" class="custom-control-label">Có</label>
@@ -39,7 +49,7 @@
         </div>
 
         <div class="card-footer">
-            <button type="submit" class="btn btn-primary">Tạo Danh Mục</button>
+            <button type="submit" class="btn btn-primary">Tạo địa điểm</button>
         </div>
         
         @csrf
