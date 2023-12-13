@@ -163,6 +163,12 @@ return [
         /*
          * Application Service Providers...
          */
+
+        /*Ni là viết ra để hoàn thành việt đổ dữ liêu ra web*/
+        App\Providers\ViewServiceProvider::class, 
+
+
+
         App\Providers\AppServiceProvider::class,
         App\Providers\AuthServiceProvider::class,
         // App\Providers\BroadcastServiceProvider::class,

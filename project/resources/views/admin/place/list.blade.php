@@ -9,6 +9,8 @@
                 <th>Tên địa điểm</th>
                 <th>Giá gốc</th>
                 <th>Giá ưu đãi</th>
+                <th>Đánh giá</th>
+                <th>Số ngày du lịch</th>
                 <th>Hoạt động</th>
                 <th>Cập nhật</th>
                 <th style="width: 100px;">&nbsp;</th>
@@ -22,6 +24,8 @@
                 <td>{{$place -> destination -> name}}</td>
                 <td>{{$place -> price}}</td>
                 <td>{{$place -> price_sale}}</td>
+                <td>{{$place -> star}}</td>
+                <td>{{$place -> day_number}}</td>
                 <td>{!! \App\Helpers\Helpers::active($place->active) !!}</td>
                 <td>
                     <a href="/admin/places/edit/ {{$place->id}}" class="btn btn-primary btn-sm">

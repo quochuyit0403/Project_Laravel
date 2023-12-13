@@ -16,7 +16,12 @@ class Hotel extends Model
         'price_sale',
         'thumb',
         'active',
-        'place_id'
+        'place_id',
+        'star',
+        'thumb_1',
+        'thumb_2',
+        'thumb_3',
+        'thumb_4',
     ];
 
     // Khóa ngoại trỏ đến bảng places, 1 khách sạn thì chỉ có thể ở 1 tour

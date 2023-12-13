@@ -22,14 +22,16 @@ class CreateFormRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => 'required'
+            'name' => 'required',
+            'thumb' => 'required'
         ];
     }
 
     public function messages(): array
     {
         return [
-            'name.required' => 'Vui long nhap ten danh muc',
+            'name.required' => 'Vui lòng nhập tên địa điểm',
+            'thumb.required' => "Tên file ảnh không được để trống!"
         ];
     }
 }

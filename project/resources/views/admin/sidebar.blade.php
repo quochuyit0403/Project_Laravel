@@ -106,7 +106,7 @@
                     </ul>
                 </li>
 
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a href="#" class="nav-link">
                         <i class="fa-solid fa-image"></i>
                         <p style="margin-left: 10px;">Slider
@@ -127,7 +127,7 @@
                             </a>
                         </li>
                     </ul>
-                </li>
+                </li> -->
 
             </ul>
         </nav>

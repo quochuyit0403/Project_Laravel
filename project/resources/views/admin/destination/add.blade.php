@@ -17,7 +17,7 @@
                 <label for="menu">Địa điểm</label>
                 <select class="form-control" name="parent_id">
                     <option value="0">Quận</option>
-                    @foreach($destinations as $destination)
+                    @foreach($destinations as $destination) 
                         <option value="{{ $destination->id }}">{{ $destination->name }}</option>
                     @endforeach
                 </select>
@@ -44,6 +44,15 @@
                     <input class="custom-control-input" value="0" type="radio" id="no_active" name="active" >
                     <label for="no_active" class="custom-control-label">Không</label>
                 </div>
+            </div>
+
+            <div class="form-group">
+                <label for="menu">Ảnh địa điểm</label>
+                <input type="file"  class="form-control" id="upload">
+                <div id="image_show">
+
+                </div>
+                <input type="hidden" name="thumb" id="thumb">
             </div>
 
         </div>

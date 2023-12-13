@@ -14,11 +14,12 @@ class Destination extends Model
         'parent_id',
         'description',
         'content',
-        'active'
+        'active',
+        'thumb'
     ];
 
     // Dinh nghia moi quan he 1 - nhieu
-    // public function places() {
-    //     return $this->hasMany(Place::class, 'destination_id');
-    // }
+    public function places() {
+        return $this->hasMany(Place::class, 'destination_id', 'id');
+    }
 }

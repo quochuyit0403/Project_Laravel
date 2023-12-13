@@ -81,6 +81,15 @@
             }
             return false;
         }
+
+
+        // Hien thi ra man hinh nhung cai anh, du lieu tu co so du lieu
+        // public function show() {
+        //     return Place::select('name', 'id', 'descriptions', 'price', 'price_sale', 'thumb', 'star', 'day_number')
+        //     ->where('destination_id', 0)
+        //     ->orderBy('id')
+        //     ->get();
+        // }
     }
 
 ?>

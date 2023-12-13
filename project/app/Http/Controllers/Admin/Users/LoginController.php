@@ -19,12 +19,14 @@ class LoginController extends Controller
         // Lay cac gia tri input va token ra
         // dd($request->input());
 
+        // Kiểm tra người dùng nhập vào có khớp với db k 
         if (Auth::attempt([
             'email' => $request->input('email'),
             'password' => $request->input('password')
         ])) {
             return redirect()->route('admin');
         }
+        // Thông báo lỗi
         Session()->flash('error', 'Email hoặc mật khẩu không đúng');
         return redirect()->back();
     }

@@ -48,12 +48,16 @@
                         <label for="menu">Số điện thoại</label>
                         <input type="number" name="phone" value="{{ $hotel->phone }}"  class="form-control" >
                     </div>
+                    <div class="form-group">
+                        <label for="menu">Đánh giá khách hàng</label>
+                        <input type="number" name="star" value="{{ $hotel->star }}"  class="form-control" >
+                    </div>
                 </div>
             </div>
 
             <div class="form-group">
                 <label>Mô tả </label>
-                <textarea name="descriptions" id='content' class="form-control">{{ $hotel->descriptions }}</textarea>
+                <textarea name="descriptions" class="form-control">{{ $hotel->descriptions }}</textarea>
             </div>
 
 
@@ -66,6 +70,50 @@
                     </a>
                 </div>
                 <input type="hidden" name="thumb" value="{{ $hotel->thumb }}" id="thumb">
+            </div>
+
+            <div class="form-group">
+                <label for="menu">Ảnh chi tiết khách sạn</label>
+                <input type="file"  class="form-control" id="upload_1">
+                <div id="image_show_1">
+                    <a href="{{ $hotel->thumb_1 }}" target="_blank">
+                        <img src="{{ $hotel->thumb_1 }}" width="100px">
+                    </a>
+                </div>
+                <input type="hidden" name="thumb_1" value="{{ $hotel->thumb_1 }}" id="thumb_1">
+            </div>
+
+            <div class="form-group">
+                <label for="menu">Ảnh chi tiết khách sạn</label>
+                <input type="file"  class="form-control" id="upload_2">
+                <div id="image_show_2">
+                    <a href="{{ $hotel->thumb_2 }}" target="_blank">
+                        <img src="{{ $hotel->thumb_2 }}" width="100px">
+                    </a>
+                </div>
+                <input type="hidden" name="thumb_2" value="{{ $hotel->thumb_2 }}" id="thumb_2">
+            </div>
+
+            <div class="form-group">
+                <label for="menu">Ảnh chi tiết khách sạn</label>
+                <input type="file"  class="form-control" id="upload_3">
+                <div id="image_show_3">
+                    <a href="{{ $hotel->thumb_3 }}" target="_blank">
+                        <img src="{{ $hotel->thumb_3 }}" width="100px">
+                    </a>
+                </div>
+                <input type="hidden" name="thumb_3" value="{{ $hotel->thumb_3 }}" id="thumb_3">
+            </div>
+
+            <div class="form-group">
+                <label for="menu">Ảnh chi tiết khách sạn</label>
+                <input type="file"  class="form-control" id="upload_4">
+                <div id="image_show_4">
+                    <a href="{{ $hotel->thumb_4 }}" target="_blank">
+                        <img src="{{ $hotel->thumb_4 }}" width="100px">
+                    </a>
+                </div>
+                <input type="hidden" name="thumb_4" value="{{ $hotel->thumb_4 }}" id="thumb_4">
             </div>
 
             <div class="form-group">

@@ -45,6 +45,22 @@
                 </div>
             </div>
 
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="menu">Đánh giá khách hàng</label>
+                        <input type="number" name="star" value="{{ $place->star }}"  class="form-control" >
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="menu">Số ngày du lịch</label>
+                        <input type="number" name="day_number" value="{{ $place->day_number }}"  class="form-control" >
+                    </div>
+                </div>
+            </div>
+
             <div class="form-group">
                 <label>Mô tả </label>
                 <textarea name="descriptions" class="form-control">{{ $place->descriptions }}</textarea>
@@ -52,7 +68,7 @@
 
             <div class="form-group">
                 <label>Mô tả chi tiết</label>
-                <textarea name="content" id="content" class="form-control">{{ $place->content }}</textarea>
+                <textarea name="content" class="form-control">{{ $place->content }}</textarea>
             </div>
 
             <div class="form-group">
@@ -64,6 +80,50 @@
                     </a>
                 </div>
                 <input type="hidden" name="thumb" id="thumb" value="{{ $place->thumb }}">
+            </div>
+
+            <div class="form-group">
+                <label for="menu">Ảnh chi tiết tour du lịch</label>
+                <input type="file"  class="form-control" id="upload_1">
+                <div id="image_show_1">
+                    <a href="{{ $place->thumb_1 }}" target="_blank">
+                        <img src="{{ $place->thumb_1 }}" width="100px">
+                    </a>
+                </div>
+                <input type="hidden" name="thumb_1" id="thumb_1" value="{{ $place->thumb_1 }}">
+            </div>
+
+            <div class="form-group">
+                <label for="menu">Ảnh chi tiết tour du lịch</label>
+                <input type="file"  class="form-control" id="upload_2">
+                <div id="image_show_2">
+                    <a href="{{ $place->thumb_2 }}" target="_blank">
+                        <img src="{{ $place->thumb_2 }}" width="100px">
+                    </a>
+                </div>
+                <input type="hidden" name="thumb_2" id="thumb_2" value="{{ $place->thumb_2 }}">
+            </div>
+
+            <div class="form-group">
+                <label for="menu">Ảnh chi tiết tour du lịch</label>
+                <input type="file"  class="form-control" id="upload_3">
+                <div id="image_show_3">
+                    <a href="{{ $place->thumb_3 }}" target="_blank">
+                        <img src="{{ $place->thumb_3 }}" width="100px">
+                    </a>
+                </div>
+                <input type="hidden" name="thumb_3" id="thumb_3" value="{{ $place->thumb_3 }}">
+            </div>
+
+            <div class="form-group">
+                <label for="menu">Ảnh chi tiết tour du lịch</label>
+                <input type="file"  class="form-control" id="upload_4">
+                <div id="image_show_4">
+                    <a href="{{ $place->thumb_4 }}" target="_blank">
+                        <img src="{{ $place->thumb_4 }}" width="100px">
+                    </a>
+                </div>
+                <input type="hidden" name="thumb_4" id="thumb_4" value="{{ $place->thumb_4 }}">
             </div>
 
             <div class="form-group">

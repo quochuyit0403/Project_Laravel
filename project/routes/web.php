@@ -4,13 +4,24 @@ use App\Http\Controllers\Admin\DestinationController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\Users\LoginController;
 use App\Http\Controllers\Admin\MainController;
+use App\Http\Controllers\MainnController;
 use App\Http\Controllers\Admin\PlaceController;
 use App\Models\Destination;
 use Illuminate\Support\Facades\App;
 
+use App\Http\Controllers\Destination\DestinationPageController;
+
 use App\Http\Controllers\Admin\UploadController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\HotelController;
+use App\Http\Controllers\CartController;
+use App\Http\Controllers\CartHotelController;
+use App\Http\Controllers\Hotel\HotelPageController;
+use App\Http\Controllers\Tour\TourPageController;
+
+use App\Http\Controllers\Tour_detailController;
+use App\Http\Controllers\DesController;
+
 // Route::get('/', function () {
 //     return view('welcome');
 // });
@@ -45,7 +56,7 @@ Route::middleware(['auth'])->group(function() {
             Route::post('edit/{place}', [PlaceController::class, 'update']);
         });
 
-        // Places
+        // Hotels
         Route::prefix('hotels')->group(function() {
             Route::get('add', [HotelController::class, 'create']);
             Route::post('add', [HotelController::class, 'travel']);
@@ -69,3 +80,28 @@ Route::middleware(['auth'])->group(function() {
         Route::post('upload/service', [UploadController::class, 'store']);
     });
 });
+
+Route::get('/', [MainnController::class, 'index'])->name('main_page');
+
+
+Route::get('/destination', [DestinationPageController::class, 'index'])->name('destination_page');
+
+
+Route::get('/tour', [TourPageController::class, 'index'])->name('tour_page');
+
+
+Route::get('/hotel', [HotelPageController::class, 'index'])->name('hotel_page');
+
+
+// Ấn vào link để load tới trang tour
+Route::get('diem-den/{id}-{slug}.html', [DesController::class, 'index']);
+Route::get('tour/{id}', [TourPageController::class, 'index_detail'])->name('detail_tour');
+Route::get('hotel/{id}', [HotelPageController::class, 'index_detail'])->name('detail_hotel');
+
+// Xu li gio hang
+// Route::post('add-cart', [CartController::class, 'index']);
+// Route::get('carts', [CartController::class, 'show']);
+
+// Xu li dat tour/ dat khach san 
+Route::post('carts', [CartController::class, 'addcart'])->name('booktour');
+Route::post('carts-hotel', [CartHotelController::class, 'addcart'])->name('bookroom');

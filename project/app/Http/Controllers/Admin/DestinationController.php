@@ -26,6 +26,8 @@ class DestinationController extends Controller
         ]);
     }
 
+
+    // Xử lí thêm
     public function travel(CreateFormRequest $request) {
         // dd($request->input());
 

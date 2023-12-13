@@ -23,7 +23,11 @@ class PlaceRequest extends FormRequest
     {
         return [
             'name' => 'required',
-            'thumb' => 'required'
+            'thumb' => 'required',
+            'thumb_1' => 'required',
+            'thumb_2' => 'required',
+            'thumb_3' => 'required',
+            'thumb_4' => 'required',
         ];
     }
 
@@ -31,7 +35,11 @@ class PlaceRequest extends FormRequest
     {
         return [
             'name.required' => "Vui lòng nhập tên Tour!",
-            'thumb.required' => "Tên file ảnh không được để trống!"
+            'thumb.required' => "Tên file ảnh không được để trống!",
+            'thumb_1.required' => "Tên file ảnh không được để trống!",
+            'thumb_2.required' => "Tên file ảnh không được để trống!",
+            'thumb_3.required' => "Tên file ảnh không được để trống!",
+            'thumb_4.required' => "Tên file ảnh không được để trống!",
         ];
     }
 }

@@ -9,6 +9,7 @@
                 <th>Tour</th>
                 <th>Giá gốc</th>
                 <th>Giá ưu đãi</th>
+                <th>Đánh giá</th>
                 <th>Hoạt động</th>
                 <th>Cập nhật</th>
                 <th style="width: 100px;">&nbsp;</th>
@@ -22,6 +23,7 @@
                 <td>{{$hotel -> place -> name}}</td>
                 <td>{{$hotel -> price}}</td>
                 <td>{{$hotel -> price_sale}}</td>
+                <td>{{$hotel -> star}}</td>
                 <td>{!! \App\Helpers\Helpers::active($hotel->active) !!}</td>
                 <td>
                     <a href="/admin/hotels/edit/ {{$hotel->id}}" class="btn btn-primary btn-sm">

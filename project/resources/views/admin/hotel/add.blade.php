@@ -47,12 +47,16 @@
                         <label for="menu">Số điện thoại</label>
                         <input type="number" name="phone" value="{{ old('phone') }}"  class="form-control" >
                     </div>
+                    <div class="form-group">
+                        <label for="menu">Đánh giá khách hàng</label>
+                        <input type="number" name="star" value="{{ old('star') }}"  class="form-control" >
+                    </div>
                 </div>
             </div>
 
             <div class="form-group">
                 <label>Mô tả </label>
-                <textarea name="descriptions" id='content' class="form-control">{{ old('description') }}</textarea>
+                <textarea name="descriptions" class="form-control">{{ old('description') }}</textarea>
             </div>
 
 
@@ -63,6 +67,42 @@
 
                 </div>
                 <input type="hidden" name="thumb" id="thumb">
+            </div>
+
+            <div class="form-group">
+                <label for="menu">Ảnh chi tiết khách sạn</label>
+                <input type="file"  class="form-control" id="upload_1">
+                <div id="image_show_1">
+
+                </div>
+                <input type="hidden" name="thumb_1" id="thumb_1">
+            </div>
+
+            <div class="form-group">
+                <label for="menu">Ảnh chi tiết khách sạn</label>
+                <input type="file"  class="form-control" id="upload_2">
+                <div id="image_show_2">
+
+                </div>
+                <input type="hidden" name="thumb_2" id="thumb_2">
+            </div>
+
+            <div class="form-group">
+                <label for="menu">Ảnh chi tiết khách sạn</label>
+                <input type="file"  class="form-control" id="upload_3">
+                <div id="image_show_3">
+
+                </div>
+                <input type="hidden" name="thumb_3" id="thumb_3">
+            </div>
+            
+            <div class="form-group">
+                <label for="menu">Ảnh chi tiết khách sạn</label>
+                <input type="file"  class="form-control" id="upload_4">
+                <div id="image_show_4">
+
+                </div>
+                <input type="hidden" name="thumb_4" id="thumb_4">
             </div>
 
             <div class="form-group">

@@ -17,7 +17,13 @@ class Place extends Model
         'price',
         'price_sale',
         'active',
-        'thumb'
+        'thumb',
+        'star',
+        'day_number',
+        'thumb_1',
+        'thumb_2',
+        'thumb_3',
+        'thumb_4'
     ];
 
 

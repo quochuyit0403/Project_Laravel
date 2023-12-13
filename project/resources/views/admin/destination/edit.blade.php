@@ -36,6 +36,17 @@
                 <textarea name="content" id="content" class="form-control">{{$destination->content}}</textarea>
             </div>
 
+            <div class="form-group">
+                <label for="menu">Ảnh tour du lịch</label>
+                <input type="file"  class="form-control" id="upload">
+                <div id="image_show">
+                    <a href="{{ $destination->thumb }}" target="_blank">
+                        <img src="{{ $destination->thumb }}" width="100px">
+                    </a>
+                </div>
+                <input type="hidden" name="thumb" id="thumb" value="{{ $destination->thumb }}">
+            </div>
+
 
             <div class="form-group">
                 <label>Hoạt động</label>

@@ -43,14 +43,30 @@
                 </div>
             </div>
 
-            <div class="form-group">
-                <label>Mô tả </label>
-                <textarea name="descriptions" class="form-control">{{ old('description') }}</textarea>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="menu">Đánh giá khách hàng</label>
+                        <input type="number" name="star" value="{{ old('star') }}"  class="form-control" >
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="menu">Số ngày</label>
+                        <input type="number" name="day_number" value="{{ old('day_number') }}"  class="form-control" >
+                    </div>
+                </div>
             </div>
 
             <div class="form-group">
-                <label>Mô tả chi tiết</label>
-                <textarea name="content" id="content" class="form-control">{{ old('content') }}</textarea>
+                <label>Mô tả </label>
+                <textarea name="descriptions" class="form-control">{{ old('descriptions') }}</textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Mô tả chi tiết </label>
+                <textarea name="content" class="form-control">{{ old('content') }}</textarea>
             </div>
 
             <div class="form-group">
@@ -63,6 +79,43 @@
             </div>
 
             <div class="form-group">
+                <label for="menu">Ảnh chi tiết tour du lịch</label>
+                <input type="file"  class="form-control" id="upload_1">
+                <div id="image_show_1">
+
+                </div>
+                <input type="hidden" name="thumb_1" id="thumb_1">
+            </div>
+
+            <div class="form-group">
+                <label for="menu">Ảnh chi tiết tour du lịch</label>
+                <input type="file"  class="form-control" id="upload_2">
+                <div id="image_show_2">
+
+                </div>
+                <input type="hidden" name="thumb_2" id="thumb_2">
+            </div>
+
+            <div class="form-group">
+                <label for="menu">Ảnh chi tiết tour du lịch</label>
+                <input type="file"  class="form-control" id="upload_3">
+                <div id="image_show_3">
+
+                </div>
+                <input type="hidden" name="thumb_3" id="thumb_3">
+            </div>
+
+            <div class="form-group">
+                <label for="menu">Ảnh chi tiết tour du lịch</label>
+                <input type="file"  class="form-control" id="upload_4">
+                <div id="image_show_4">
+
+                </div>
+                <input type="hidden" name="thumb_4" id="thumb_4">
+            </div>
+
+
+            <div class="form-group">
                 <label>Hoạt động</label>
                 <div class="custom-control custom-radio">
                     <input class="custom-control-input" value="1" type="radio" id="active" name="active" checked="">
@@ -73,6 +126,9 @@
                     <label for="no_active" class="custom-control-label">Không</label>
                 </div>
             </div>
+
+            
+            
 
         </div>
 
